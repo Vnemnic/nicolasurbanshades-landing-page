@@ -79,13 +79,8 @@
     <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-6 flex justify-between items-center">
             
-            <div>
-                <a href="#" class="flex items-center space-x-3">
-                    <div>
-                        <span class="font-brand text-3xl text-white tracking-wider">URBAN THREADS</span>
-                        <p class="text-xs text-gray-400 tracking-widest">COURAGE MEETS ART IN STYLE</p>
-                    </div>
-                </a>
+            <div class="flex items-center bg-white p-2 rounded-lg">
+                <img src="Urban Shades.png" alt="Urban Shades Logo" class="h-20 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/150x50/1a1a1a/ffffff?text=URBAN+THREADS';">
             </div>
 
             <div class="hidden md:flex items-center space-x-6 text-lg">
@@ -115,18 +110,9 @@
                     <a href="#collection" class="bg-pink-500 text-white font-bold text-lg py-3 px-10 rounded-md cta-button">
                         Shop Collection
                     </a>
-                    <a href="#collection" class="border border-gray-600 text-white font-bold text-lg py-3 px-10 rounded-md transition-colors hover:bg-gray-700 hover:border-gray-700">
-                        View Lookbook
-                    </a>
                 </div>
                 
-                <div class="flex items-center space-x-3 text-gray-400">
-                    <span class="text-sm font-semibold">Select Size:</span>
-                    <button class="w-10 h-10 rounded-md border border-gray-700 hover:border-pink-500 hover:text-white transition-colors">S</button>
-                    <button class="w-10 h-10 rounded-md border border-gray-700 hover:border-pink-500 hover:text-white transition-colors">M</button>
-                    <button class="w-10 h-10 rounded-md border border-pink-500 text-white transition-colors">L</button> <button class="w-10 h-10 rounded-md border border-gray-700 hover:border-pink-500 hover:text-white transition-colors">XL</button>
                 </div>
-            </div>
 
             <div id="collection" class="grid grid-cols-2 gap-6">
                 
@@ -156,18 +142,7 @@
                     </div>
                 </div>
 
-                <div id="banner-container" class="relative bg-pink-500 rounded-lg p-8 flex flex-col justify-center text-center text-white overflow-hidden">
-                    <button id="close-banner-btn" class="absolute top-3 right-3 bg-black/20 text-white rounded-full h-6 w-6 flex items-center justify-center text-lg hover:bg-black/40 transition-colors z-10" aria-label="Dismiss Banner">
-                        &times;
-                    </button>
-                    <span class="font-semibold text-xs bg-white/20 text-white px-3 py-1 rounded-full inline-block self-center mb-3">SPECIAL OFFER</span>
-                    <h3 class="font-brand text-4xl leading-tight mb-4">Get 20% OFF</h3>
-                    <p class="text-sm mb-6">Your First Order</p>
-                    <a href="https://www.facebook.com/profile.php?id=61581976041133" class="bg-white text-pink-600 font-bold py-3 px-6 rounded-md text-sm cta-button">
-                        SHOP NOW
-                    </a>
                 </div>
-            </div>
 
         </section>
 
@@ -211,6 +186,18 @@
         </div>
     </footer>
 
+    <div id="banner-container" class="bg-pink-500 rounded-lg p-6 flex flex-col justify-center text-center text-white overflow-hidden fixed bottom-6 right-6 z-50 w-80 shadow-2xl animate-fade-in-up">
+        <button id="close-banner-btn" class="absolute top-3 right-3 bg-black/20 text-white rounded-full h-6 w-6 flex items-center justify-center text-lg hover:bg-black/40 transition-colors z-10" aria-label="Dismiss Banner">
+            &times;
+        </button>
+        <span class="font-semibold text-xs bg-white/20 text-white px-3 py-1 rounded-full inline-block self-center mb-3">SPECIAL OFFER</span>
+        <h3 class="font-brand text-3xl leading-tight mb-3">Get 20% OFF</h3>
+        <p class="text-sm mb-4">Your First Order</p>
+        <a href="https://www.facebook.com/profile.php?id=61581976041133" class="bg-white text-pink-600 font-bold py-2 px-5 rounded-md text-sm cta-button">
+            SHOP NOW
+        </a>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const bannerContainer = document.getElementById('banner-container');
@@ -218,7 +205,7 @@
 
             if (bannerContainer && closeBannerBtn) {
                 closeBannerBtn.addEventListener('click', function(e) {
-                    // Stop the link from being clicked when closing the ad
+                    // This stops the click from triggering the link if the banner was a link
                     e.preventDefault(); 
                     bannerContainer.style.display = 'none';
                 });
