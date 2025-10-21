@@ -76,11 +76,11 @@
 </head>
 <body>
 
-    <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-50">
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-6 flex justify-between items-center">
             
             <div class="flex items-center bg-white p-2 rounded-lg">
-                <img src="Urban Shades.png" alt="Urban Shades Logo" class="h-20 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/150x50/1a1a1a/ffffff?text=URBAN+THREADS';">
+                <img src="UrbanThreads.png" alt="Urban Shades Logo" class="h-20 w-auto" onerror="this.onerror=null; this.src='https://placehold.co/150x50/1a1a1a/ffffff?text=URBAN+THREADS';">
             </div>
 
             <div class="hidden md:flex items-center space-x-6 text-lg">
@@ -106,11 +106,9 @@
                     Express yourself with bold designs crafted for the streets and the classroom. Limited edition styles dropping now.
                 </p>
                 
-                <div class="flex items-center space-x-4 mb-8">
-                    <a href="#collection" class="bg-pink-500 text-white font-bold text-lg py-3 px-10 rounded-md cta-button">
-                        Shop Collection
-                    </a>
-                </div>
+                <a href="#collection" class="bg-pink-500 text-white font-bold text-lg py-3 px-10 rounded-md cta-button inline-block mb-8">
+                    Shop Collection
+                </a>
                 
                 </div>
 
@@ -142,7 +140,18 @@
                     </div>
                 </div>
 
+                <div id="banner-container" class="relative bg-pink-500 rounded-lg p-8 flex flex-col justify-center text-center text-white overflow-hidden aspect-square">
+                    <button id="close-banner-btn" class="absolute top-3 right-3 bg-black/20 text-white rounded-full h-6 w-6 flex items-center justify-center text-lg hover:bg-black/40 transition-colors z-10" aria-label="Dismiss Banner">
+                        &times;
+                    </button>
+                    <span class="font-semibold text-xs bg-white/20 text-white px-3 py-1 rounded-full inline-block self-center mb-3">SPECIAL OFFER</span>
+                    <h3 class="font-brand text-4xl leading-tight mb-4">Get 20% OFF</h3>
+                    <p class="text-sm mb-6">Your First Order</p>
+                    <a href="https://www.facebook.com/profile.php?id=61581976041133" class="bg-white text-pink-600 font-bold py-3 px-6 rounded-md text-sm cta-button">
+                        SHOP NOW
+                    </a>
                 </div>
+            </div>
 
         </section>
 
@@ -185,18 +194,6 @@
             <p class="mt-8 text-sm text-gray-500">&copy; 2025 Urban Threads. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <div id="banner-container" class="bg-pink-500 rounded-lg p-6 flex flex-col justify-center text-center text-white overflow-hidden fixed bottom-6 right-6 z-50 w-80 shadow-2xl animate-fade-in-up">
-        <button id="close-banner-btn" class="absolute top-3 right-3 bg-black/20 text-white rounded-full h-6 w-6 flex items-center justify-center text-lg hover:bg-black/40 transition-colors z-10" aria-label="Dismiss Banner">
-            &times;
-        </button>
-        <span class="font-semibold text-xs bg-white/20 text-white px-3 py-1 rounded-full inline-block self-center mb-3">SPECIAL OFFER</span>
-        <h3 class="font-brand text-3xl leading-tight mb-3">Get 20% OFF</h3>
-        <p class="text-sm mb-4">Your First Order</p>
-        <a href="https://www.facebook.com/profile.php?id=61581976041133" class="bg-white text-pink-600 font-bold py-2 px-5 rounded-md text-sm cta-button">
-            SHOP NOW
-        </a>
-    </div>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
